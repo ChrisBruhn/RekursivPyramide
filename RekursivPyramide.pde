@@ -10,7 +10,7 @@ void setup() {
 void draw() {
   // initiering af af height
   height=0;
-  println(pyramid(50));
+  println(pyramid(70));
 }
 
 int pyramid(int a) {
@@ -27,7 +27,7 @@ void drawPyramidLayer(int l) {
   // variabel deklarationer
   int squareSize = 10;
   float x = width/2-((l/2)*squareSize);
-  float y = 200;
+  float y = 50;
   
   
   pushMatrix();
@@ -41,6 +41,7 @@ void drawPyramidLayer(int l) {
   }
   // tegn pyramidelag
   for (int i =0; i<l; i++) {
+    fill(random(256),random(256),random(256));
     square(i*squareSize, height*squareSize, squareSize);
   }
 
